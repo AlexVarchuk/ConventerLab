@@ -22,11 +22,13 @@ import java.util.List;
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mGoogleMap;
-    String mAddress;
-    String mOrganizationName;
+    private String mAddress;
+    private String mOrganizationName;
 
-    Double mLongitude;
-    Double mLatitude;
+    private Double mLongitude;
+    private Double mLatitude;
+
+    private MainActivity main;
 
 
     @Override
@@ -78,7 +80,13 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mGoogleMap.getUiSettings().setZoomControlsEnabled(true);
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
         mGoogleMap.setMyLocationEnabled(true);
-        getLocation();
+        if(main.checkInternetConnection()){
+
+            getLocation();
+        }else
+        {
+            return;
+        }
         if (mLatitude != null && mLongitude != null) {
             mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(mLatitude, mLongitude), 14));
             LatLng latLng = new LatLng(mLatitude, mLongitude);
