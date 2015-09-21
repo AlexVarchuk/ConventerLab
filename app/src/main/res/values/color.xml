@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="color">#536D7A</item>
+    <item name="background" type="color">#EEEEEE</item>
+    <item name="bottomButton" type="color">#AFC0C7</item>
+    <item name="pink" type="color">#BE1264</item>
+    <item name="white" type="color">#ffff</item>
+    <item name="black" type="color">#000000</item>
+    <item name="fab_item" type="color">#CFD7DA</item>
+    <item name="clear_white" type="color">#FAFAFA</item>
+    <item name="grey_frame" type="color">#F0F0F0</item>
+</resources>

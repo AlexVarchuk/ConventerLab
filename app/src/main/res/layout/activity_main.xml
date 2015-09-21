@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_AM"
+        android:background="@color/toolbar"
+        style="@style/m_w" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:id="@+id/ll_forFragment"
+    android:orientation="vertical"
+        android:layout_weight="1"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

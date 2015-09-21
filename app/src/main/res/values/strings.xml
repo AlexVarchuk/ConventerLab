@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Conventer Lab</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="item_search">Search</string>
+    <string name="tv_updating">Updating...</string>
+    <string name="name_value">Название валюты:</string>
+    <string name="site_organization">Страница организации:</string>
+    <string name="time_to_phone">Круглосуточно без выходных</string>
+    <string name="btn_share">SHARE</string>
+</resources>

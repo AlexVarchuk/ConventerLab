@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_parent"
+    android:orientation="vertical">
+    <TextView
+        style="@style/m_w"
+        android:id="@+id/tv_bank_DL"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        style="@style/m_w"
+        android:id="@+id/tv_region_DL"
+        android:textSize="14sp"
+        android:layout_margin="10dp"/>
+    <TextView
+        style="@style/m_w"
+        android:id="@+id/tv_city_DL"
+        android:textSize="14sp"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        style="@style/m_w"
+        android:id="@+id/iv_DL"/>
+    <Button
+        style="@style/m_w"
+        android:text="@string/btn_share"
+        android:id="@+id/btn_share_DL"/>
+
+</LinearLayout>

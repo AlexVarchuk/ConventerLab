@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    style="@style/match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_DI"
+        style="@style/m_w"
+        android:background="@color/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_DI">
+
+        <LinearLayout
+            android:id="@+id/ll_forScroll"
+            style="@style/m_w"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/ll_bank_info"
+                style="@style/m_w"
+                android:layout_below="@+id/toolbar_DI"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.7"
+                android:background="@color/clear_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name_bank_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Альфа Банк"
+                    android:textColor="@color/pink"
+                    android:textSize="14pt" />
+
+                <TextView
+                    style="@style/m_w"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/site_organization"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tv_site_bank_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:autoLink="web"
+                    android:textSize="6pt" />
+
+                <TextView
+                    android:id="@+id/tv_region_bank_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="регион"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tv_city_bank_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="город:"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tv_address_bank_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Адрес:"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tv_phone_first_AL"
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tel1:"
+                    android:textSize="8pt" />
+
+                <TextView
+                    style="@style/m_w"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/time_to_phone"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_header_AL"
+                style="@style/m_w"
+                android:layout_below="@+id/ll_bank_info"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.5"
+                android:background="@color/clear_white"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2.8"
+                    android:text="@string/name_value"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1.2"
+                    android:text="Покупка/Продажа"
+                    android:textSize="7pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/m_w"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/toolbar">
+
+        <ListView
+            android:id="@+id/lv_value_AL"
+            style="@style/m_w"
+            android:background="@color/clear_white" />
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/match_parent">
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fab_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="25dp"
+            fab:fab_addButtonColorNormal="@color/pink"
+            fab:fab_addButtonColorPressed="@color/pink"
+            fab:fab_addButtonPlusIconColor="@color/white"
+            fab:fab_addButtonSize="mini"
+            fab:fab_icon="@mipmap/ic_fab"
+            fab:fab_labelStyle="@style/menu_labels_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_button_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foregroundGravity="center"
+                android:onClick="onFabMapClick"
+                android:scaleType="fitCenter"
+                fab:fab_colorNormal="@color/fab_item"
+                fab:fab_colorPressed="@color/white"
+                fab:fab_icon="@drawable/ic_map"
+                fab:fab_size="mini"
+                fab:fab_title="Карта" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_button_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onFabLinkClick"
+                fab:fab_colorNormal="@color/fab_item"
+                fab:fab_colorPressed="@color/white"
+                fab:fab_icon="@drawable/ic_link"
+                fab:fab_size="mini"
+                fab:fab_title="Сайт" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action_button_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:clickable="true"
+                android:onClick="onFabCallClick"
+                android:scaleType="fitCenter"
+                fab:fab_colorNormal="@color/fab_item"
+                fab:fab_colorPressed="@color/white"
+                fab:fab_icon="@drawable/ic_phone"
+                fab:fab_size="mini"
+                fab:fab_title="Подзвонить" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </FrameLayout>
+</RelativeLayout>
